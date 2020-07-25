@@ -330,8 +330,8 @@ body a:hover {
 @media (max-width: 860px) {}
 
 .playlistadjusted {
-  overflow-y: scroll;
-  height: 360px;
+  /* overflow-y: scroll;
+  height: 360px; */
 }
 
 
