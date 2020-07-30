@@ -25,7 +25,9 @@ function getInputValue($name)
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Mwonya Music | Login</title>
+	<title>Mwonya Music Accounts</title>
+	<link rel="icon" href="assets/images/musiclogo.png" type="image/png">
+
 
 	<link href="assets/signup/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/signup/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -66,18 +68,18 @@ function getInputValue($name)
 		<div>
 			<div>
 
-				<h1 class="logo-name">IN+</h1>
+				<h1 class="logo-name">M</h1>
+				<p>Mwonya Music</p>
 
 			</div>
 			<div id="loginForm">
-				<h3>Welcome to IN+</h3>
-				<p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-					<!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
+				<h3>Welcome to Mwonya</h3>
+				<p>Listen and Enjoy Quality Entertainment from your Favourite Artists
 				</p>
-				<p>Login in. To see it in action.</p>
+				<p>Login in. To Start Listening.</p>
 				<form class="m-t" role="form" action="register.php" method="POST">
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$loginFailed); ?>
+						<span class="formerror"><?php echo $account->getError(Constants::$loginFailed); ?></span>
 						<input type="text" class="form-control" placeholder="Username" id="loginUsername" name="loginUsername" value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
 					</div>
 					<div class="form-group">
@@ -96,22 +98,22 @@ function getInputValue($name)
 				<p>Create account to see it in action.</p>
 				<form class="m-t" role="form" action="register.php" method="POST">
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$usernameCharacters); ?>
-						<?php echo $account->getError(Constants::$usernameTaken); ?>
-						<input class="form-control" id="username" name="username" type="text" placeholder="Username" value="<?php getInputValue('username') ?>" required>
+					<span class="formerror"><?php echo $account->getError(Constants::$usernameCharacters); ?></span>
+					<span class="formerror"><?php echo $account->getError(Constants::$usernameTaken); ?></span>
+					<input class="form-control" id="username" name="username" type="text" placeholder="Username" value="<?php getInputValue('username') ?>" required>
 					</div>
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$firstNameCharacters); ?>
+					<span class="formerror"><?php echo $account->getError(Constants::$firstNameCharacters); ?></span>
 						<input class="form-control" id="firstName" name="firstName" type="text" placeholder="First Name" value="<?php getInputValue('firstName') ?>" required>
 					</div>
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$lastNameCharacters); ?>
+					<span class="formerror"><?php echo $account->getError(Constants::$lastNameCharacters); ?></span>
 						<input class="form-control" id="lastName" name="lastName" type="text" placeholder="Last Name" value="<?php getInputValue('lastName') ?>" required>
 					</div>
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$emailsDontMatch); ?>
-						<?php echo $account->getError(Constants::$emailInvalid); ?>
-						<?php echo $account->getError(Constants::$emailTaken); ?>
+					<span class="formerror"><?php echo $account->getError(Constants::$emailsDontMatch); ?></span>
+					<span class="formerror"><?php echo $account->getError(Constants::$emailInvalid); ?></span>
+					<span class="formerror"><?php echo $account->getError(Constants::$emailTaken); ?></span>
 						<input class="form-control" id="email" name="email" type="email" placeholder="Email" value="<?php getInputValue('email') ?>" required>
 					</div>
 					<div class="form-group">
@@ -119,9 +121,9 @@ function getInputValue($name)
 					</div>
 
 					<div class="form-group">
-						<?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
-						<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
-						<?php echo $account->getError(Constants::$passwordCharacters); ?>
+					<span class="formerror"><?php echo $account->getError(Constants::$passwordsDoNoMatch); ?></span>
+					<span class="formerror"><?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?></span>
+					<span class="formerror"><?php echo $account->getError(Constants::$passwordCharacters); ?></span>
 						<input class="form-control" id="password" name="password" type="password" placeholder="Password" required>
 					</div>
 
@@ -138,7 +140,7 @@ function getInputValue($name)
 				</form>
 			</div>
 
-			<p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+			<p class="m-t"> <small>Mwonya Music App &copy; 2020</small> </p>
 		</div>
 	</div>
 

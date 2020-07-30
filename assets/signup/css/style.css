@@ -804,9 +804,14 @@
 .glyphicon-menu-up:before {
   content: "\e260";
 }
+
 #registerForm,
 #loginForm {
 	display: none;
+}
+
+.formerror{
+  color:purple
 }
 
 h1,
