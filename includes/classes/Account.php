@@ -120,17 +120,17 @@
         private function validatePassword($pw, $pw2){
 
             if($pw != $pw2){
-                array_push($this->errorArray,Constants::$passwordsDoNotMatch);
+                array_push($this->errorArray,Constants::$passwordsDoNoMatch);
                 return;
             }
 
             if(preg_match('/[^A-Za-z0-9]/',$pw)){
-                array_push($this->errorArray,Constants::$passwordsNotAlphanumeric);
+                array_push($this->errorArray,Constants::$passwordNotAlphanumeric);
                 return;
             }
 
             if(strlen($pw) > 30 || strlen($pw) < 5){
-                array_push($this->errorArray,Constants::$passwordCharacter);
+                array_push($this->errorArray,Constants::$passwordCharacters);
                 return;
             }
             

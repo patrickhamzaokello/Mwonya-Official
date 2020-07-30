@@ -1,151 +1,162 @@
 <?php
-	include("includes/config.php");
-	include("includes/classes/Account.php");
-	include("includes/classes/Constants.php");
+include("includes/config.php");
+include("includes/classes/Account.php");
+include("includes/classes/Constants.php");
 
-	$account = new Account($con);
+$account = new Account($con);
 
-	include("includes/handlers/register-handler.php");
-	include("includes/handlers/login-handler.php");
+include("includes/handlers/register-handler.php");
+include("includes/handlers/login-handler.php");
 
-	function getInputValue($name) {
-		if(isset($_POST[$name])) {
-			echo $_POST[$name];
-		}
+function getInputValue($name)
+{
+	if (isset($_POST[$name])) {
+		echo $_POST[$name];
 	}
+}
 ?>
 
+
+<!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>Pkase | Music</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- <script src="assets/js/jquery.js"></script> -->
-	<script src="assets/js/register.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Mwonya Music | Login</title>
+
+	<link href="assets/signup/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/signup/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<link href="assets/signup/css/animate.css" rel="stylesheet">
+	<link href="assets/signup/css/style.css" rel="stylesheet">
+
+	<script src="assets/signup/js/jquery-3.1.1.min.js"></script>
+	<script src="assets/signup/js/register.js"></script>
+
 </head>
-<body>
+
+
+
+<body class="gray-bg">
 	<?php
 
-	if(isset($_POST['registerButton'])) {
+	if (isset($_POST['registerButton'])) {
 		echo '<script>
-				$(document).ready(function() {
-					$("#loginForm").hide();
-					$("#registerForm").show();
-				});
-			</script>';
-	}
-	else {
+            $(document).ready(function() {
+                $("#loginForm").hide();
+                $("#registerForm").show();
+            });
+        </script>';
+	} else {
 		echo '<script>
-				$(document).ready(function() {
-					$("#loginForm").show();
-					$("#registerForm").hide();
-				});
-			</script>';
+            $(document).ready(function() {
+                $("#loginForm").show();
+                $("#registerForm").hide();
+            });
+        </script>';
 	}
 
 	?>
-	
 
-	<div id="background">
 
-		<div id="loginContainer">
+	<div class="middle-box text-center loginscreen animated fadeInDown">
+		<div>
+			<div>
 
-			<div id="inputContainer">
-		
-			
-				<form id="loginForm" action="register.php" method="POST">
-					<h2>Login to your account</h2>
-					<p>
+				<h1 class="logo-name">IN+</h1>
+
+			</div>
+			<div id="loginForm">
+				<h3>Welcome to IN+</h3>
+				<p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
+					<!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
+				</p>
+				<p>Login in. To see it in action.</p>
+				<form class="m-t" role="form" action="register.php" method="POST">
+					<div class="form-group">
 						<?php echo $account->getError(Constants::$loginFailed); ?>
-						<label for="loginUsername">Username</label>
-						<input id="loginUsername" name="loginUsername" type="text" placeholder="" value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
-					</p>
-					<p>
-						<label for="loginPassword">Password</label>
-						<input id="loginPassword" name="loginPassword" type="password" placeholder="" required>
-					</p>
-
-					<button type="submit" name="loginButton">LOG IN</button>
-
-					<div class="hasAccountText">
-						<span id="hideLogin">Don't have an account yet? Signup here.</span>
+						<input type="text" class="form-control" placeholder="Username" id="loginUsername" name="loginUsername" value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
 					</div>
-					
+					<div class="form-group">
+						<input id="loginPassword" name="loginPassword" type="password" class="form-control" placeholder="Password" required="">
+					</div>
+					<button type="submit" name="loginButton" class="btn btn-primary block full-width m-b">Login</button>
+
+					<a href="#"><small>Forgot password?</small></a>
+					<p class="text-muted text-center"><small>Do not have an account?</small></p>
+					<a class="btn btn-sm btn-white btn-block" id="hideLogin">Create an account</a>
 				</form>
+			</div>
 
-
-
-				<form id="registerForm" action="register.php" method="POST">
-					<h2>Create your free account</h2>
-					<p>
+			<div id="registerForm">
+				<h3>Register to IN+</h3>
+				<p>Create account to see it in action.</p>
+				<form class="m-t" role="form" action="register.php" method="POST">
+					<div class="form-group">
 						<?php echo $account->getError(Constants::$usernameCharacters); ?>
 						<?php echo $account->getError(Constants::$usernameTaken); ?>
-						<label for="username">Username</label>
-						<input id="username" name="username" type="text" placeholder="" value="<?php getInputValue('username') ?>" required>
-					</p>
-
-					<p>
+						<input class="form-control" id="username" name="username" type="text" placeholder="Username" value="<?php getInputValue('username') ?>" required>
+					</div>
+					<div class="form-group">
 						<?php echo $account->getError(Constants::$firstNameCharacters); ?>
-						<label for="firstName">First name</label>
-						<input id="firstName" name="firstName" type="text" placeholder="" value="<?php getInputValue('firstName') ?>" required>
-					</p>
-
-					<p>
+						<input class="form-control" id="firstName" name="firstName" type="text" placeholder="First Name" value="<?php getInputValue('firstName') ?>" required>
+					</div>
+					<div class="form-group">
 						<?php echo $account->getError(Constants::$lastNameCharacters); ?>
-						<label for="lastName">Last name</label>
-						<input id="lastName" name="lastName" type="text" placeholder="" value="<?php getInputValue('lastName') ?>" required>
-					</p>
-
-					<p>
-						<?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
+						<input class="form-control" id="lastName" name="lastName" type="text" placeholder="Last Name" value="<?php getInputValue('lastName') ?>" required>
+					</div>
+					<div class="form-group">
+						<?php echo $account->getError(Constants::$emailsDontMatch); ?>
 						<?php echo $account->getError(Constants::$emailInvalid); ?>
 						<?php echo $account->getError(Constants::$emailTaken); ?>
-						<label for="email">Email</label>
-						<input id="email" name="email" type="email" placeholder="" value="<?php getInputValue('email') ?>" required>
-					</p>
+						<input class="form-control" id="email" name="email" type="email" placeholder="Email" value="<?php getInputValue('email') ?>" required>
+					</div>
+					<div class="form-group">
+						<input class="form-control" id="email2" name="email2" type="email" placeholder="Confirm Email" value="<?php getInputValue('email2') ?>" required>
+					</div>
 
-					<p>
-						<label for="email2">Confirm email</label>
-						<input id="email2" name="email2" type="email" placeholder="" value="<?php getInputValue('email2') ?>" required>
-					</p>
-
-					<p>
+					<div class="form-group">
 						<?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
 						<?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
 						<?php echo $account->getError(Constants::$passwordCharacters); ?>
-						<label for="password">Password</label>
-						<input id="password" name="password" type="password" placeholder="" required>
-					</p>
-
-					<p>
-						<label for="password2">Confirm password</label>
-						<input id="password2" name="password2" type="password" placeholder="" required>
-					</p>
-
-					<button type="submit" name="registerButton">SIGN UP</button>
-
-					<div class="hasAccountText">
-						<span id="hideRegister">Already have an account? Log in here.</span>
+						<input class="form-control" id="password" name="password" type="password" placeholder="Password" required>
 					</div>
-					
+
+					<div class="form-group">
+						<input class="form-control" id="password2" name="password2" type="password" placeholder="Confirm Password" required>
+					</div>
+					<div class="form-group">
+						<div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
+					</div>
+					<button type="submit" class="btn btn-primary block full-width m-b" name="registerButton">Register</button>
+
+					<p class="text-muted text-center"><small>Already have an account?</small></p>
+					<a class="btn btn-sm btn-white btn-block" id="hideRegister">Login</a>
 				</form>
-
-
 			</div>
 
-			<div id="loginText">
-				<h1>Get great music, right now</h1>
-				<h2>Listen to loads of songs for free</h2>
-				<ul>
-					<li>Discover music you'll fall in love with</li>
-					<li>Create your own playlists</li>
-					<li>Follow artists to keep up to date</li>
-				</ul>
-			</div>
-
+			<p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
 		</div>
 	</div>
 
+	<!-- Mainly scripts -->
+
+	<script src="assets/signup/js/popper.min.js"></script>
+	<script src="assets/signup/js/bootstrap.js"></script>
+	<!-- iCheck -->
+	<script src="assets/signup/js/plugins/iCheck/icheck.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.i-checks').iCheck({
+				checkboxClass: 'icheckbox_square-green',
+				radioClass: 'iradio_square-green',
+			});
+		});
+	</script>
+
 </body>
+
 </html>
