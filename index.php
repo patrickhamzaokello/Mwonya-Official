@@ -31,9 +31,9 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Landing template for startups</h1>
-	                        <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a class="button" href="#">Get in touch</a></div>
+	                        <h1 class="hero-title mt-0">Mwonya Music Platform</h1>
+	                        <p class="hero-paragraph">Home to Music, Podcasts, Peoms, Dj Mixes and Live Radio. All available on the go</p>
+	                        <div class="hero-cta"><a class="button button-primary" href="register.php">Create Account</a><a class="button" href="#">Get in touch</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
