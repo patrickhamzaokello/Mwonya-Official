@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Solid Template</title>
+    <title>Mwonya Home</title>
+	<link rel="icon" href="assets/images/musiclogo.png" type="image/png">
+
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
@@ -32,8 +34,9 @@
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Mwonya Music Platform</h1>
-	                        <p class="hero-paragraph">Home to Music, Podcasts, Peoms, Dj Mixes and Live Radio. All available on the go</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="register.php">Create Account</a><a class="button" href="#">Get in touch</a></div>
+                            <p class="hero-paragraph">Home to Music, Live Radio, Podcasts,Dj Mixes  and  Poems  All available on the go</p>
+                            <p style="font-size: 15px;">Enjoy Ugandan Content at www.mwonya.com</p>
+	                        <div class="hero-cta"><a class="button button-primary" href="register.php">Create Account</a><a class="button" href="register.php">Get in touch</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -61,55 +64,55 @@
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-01.svg" alt="Feature 01">
+										<img src="dist/images/feature-icon-02.svg" width="50" alt="Feature 01">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Music</h4>
+                                    <p class="text-sm mb-0">Enjoy our Wide Collection of Songs and Albums from various Artists, New Realeases and so much more from Ugandan Music Entertainment</p>
                                 </div>
                             </div>
 							<div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-02.svg" alt="Feature 02">
+										<img src="dist/images/feature-icon-04.svg" width="50" alt="Feature 02">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Live Radio</h4>
+                                    <p class="text-sm mb-0">Listen to Your Favourite Radio Channels on the go, anywhere anytime all available from the wide range of local channels</p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-03.svg" alt="Feature 03">
+										<img src="dist/images/feature-icon-01.svg" width="50" alt="Feature 03">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Podcasts</h4>
+                                    <p class="text-sm mb-0">Featuring top Shows around Town with Topics suitable to your moods and interests all available</p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-04.svg" alt="Feature 04">
+										<img src="dist/images/feature-icon-03.svg" width="50" alt="Feature 04">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Dj Mixes</h4>
+                                    <p class="text-sm mb-0">Explore all your Favourite Djs and their Mixtapes all in one place. Create Playlist of your Favourite nonstops</p>
                                 </div>
                             </div>
 							<div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-05.svg" alt="Feature 05">
+										<img src="dist/images/feature-icon-05.svg" width="50" alt="Feature 05">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">Poems</h4>
+                                    <p class="text-sm mb-0">Bringing to you the Wide collection of Poems in many genre for all the Poem Lovers</p>
                                 </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
                                     <div class="feature-icon">
-										<img src="dist/images/feature-icon-06.svg" alt="Feature 06">
+										<img src="dist/images/feature-icon-06.svg"  width="50" alt="Feature 06">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
-                                    <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
+                                    <h4 class="feature-title mt-24">More +</h4>
+                                    <p class="text-sm mb-0">We are focused on Developing more Products to meet our increasing customer demands and ensuring quality content produced</p>
                                 </div>
                             </div>
                         </div>
@@ -122,33 +125,33 @@
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
                             <h2 class="section-title mt-0">Unlimited for all</h2>
-                            <p class="section-paragraph mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut ad quis nostrud.</p>
+                            <p class="section-paragraph mb-0">Sign up and Setup Payment Methods and Enjoy Full Features with no Limits</p>
                         </div>
 						<div class="pricing-tables-wrap">
                             <div class="pricing-table">
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">49</span><span class="text-xs">/month</span></div>
+                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">UGX</span><span class="pricing-table-price-amount h1"> 20,000</span><span class="text-xs">/month</span></div>
                                         </div>
 										<div class="pricing-table-features-title text-xs pt-24 pb-24">What you will get</div>
                                         <ul class="pricing-table-features list-reset text-xs">
                                             <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
+                                                <span>Unlimited Access to All Content</span>
                                             </li>
                                             <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
+                                                <span>Saving Songs Offline to Listen Later</span>
                                             </li>
                                             <li>
-                                                <span>Lorem ipsum dolor sit nisi</span>
+                                                <span>Access to Artist Live Performance on Mwonya</span>
                                             </li>
 											<li>
-												<span>Lorem ipsum dolor sit nisi</span>
+												<span>Sharing Playlists with Friends</span>
 											</li>
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#">Pre order now</a>
+                                        <a class="button button-primary button-shadow button-block" href="register.php">Buy Package now</a>
                                     </div>
                                 </div>
                             </div>
@@ -160,9 +163,9 @@
 			<section class="cta section">
 				<div class="container">
 					<div class="cta-inner section-inner">
-						<h3 class="section-title mt-0">Still not convinced on buying?</h3>
+						<h3 class="section-title mt-0">To Enjoy Mwonya Music, Podcast, Live Radio ...</h3>
 						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="#">Get in touch</a>
+							<a class="button button-primary button-wide-mobile" href="register.php">Create Account</a>
 						</div>
 					</div>
 				</div>
@@ -217,7 +220,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2019 Solid, all rights reserved</div>
+                    <div class="footer-copyright">&copy; 2020 Mwonya, all rights reserved</div>
                 </div>
             </div>
         </footer>

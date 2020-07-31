@@ -1560,28 +1560,28 @@ button:focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #1ab394;
-  border-color: #1ab394;
+  background-color: #673AB7;
+  border-color: #673AB7;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus {
-  background-color: #18a689;
-  border-color: #18a689;
+  background-color: #9C27B0;
+  border-color: #9C27B0;
   color: #FFFFFF;
 }
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #18a689;
-  border-color: #18a689;
+  background-color: #673AB7;
+  border-color: #673AB7;
 }
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #18a689;
-  border-color: #18a689;
+  background-color: #673AB7;
+  border-color: #673AB7;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -1787,9 +1787,10 @@ fieldset[disabled] .btn-link.active {
   color: #cacaca;
 }
 .btn-white {
-  color: inherit;
-  background: white;
-  border: 1px solid #e7eaec;
+  color: white;
+  background: #363844;
+  border: 1px solid #000000;
+  color: #fff;
 }
 .btn-white:hover,
 .btn-white:focus,
@@ -5697,7 +5698,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
   padding: 100px 20px 20px 20px;
 }
 .logo-name {
-  color: #e6e6e6;
+  color: #5115bb14;
   font-size: 180px;
   font-weight: 800;
   letter-spacing: -10px;

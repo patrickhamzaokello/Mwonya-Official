@@ -34,7 +34,7 @@ $(".searchInput").focus();
     <div class="page-flows">
     
       <span class="flow" role="link" tabindex="0" onclick="openPage('browse.php')">
-        Keda Music
+        Mwonya
       </span>
       
       

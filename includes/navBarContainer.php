@@ -11,7 +11,7 @@ include("includes/classes/Playlist.php");
     <!-- Main -->
     <div class="navigation__list navwithimage">
 
-      <img class="userpicture" src="assets/images/profile-pics/user.jpg" width="48px" alt="">
+      <img class="userpicture" src="assets/images/profile-pics/user.png" width="48px" alt="">
 
       <p class="homeuser">
         <span class="userinfo username"><?php echo $userLoggedIn->getFirstandLastname(); ?></span>

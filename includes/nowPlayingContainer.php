@@ -298,7 +298,7 @@ $jsonArray = json_encode($resultArray);
       </a>
 
       <span class="control" role="link" tabindex="0" onclick="openPage('browse.php')">
-        Keda Music
+        Mwonya
       </span>
 
     </span>
