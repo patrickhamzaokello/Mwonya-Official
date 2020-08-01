@@ -186,15 +186,18 @@ body a:hover {
 
 @media (max-width: 1400px) {
   .content__left {
-    width: 20%;
+    width: 30%;
   }
 
   .content__middle {
-    width: 80%;
+    width: 70%;
   }
 
   .content__right {
     display: none;
+  }
+  .header .user {
+   display: none;
   }
 }
 

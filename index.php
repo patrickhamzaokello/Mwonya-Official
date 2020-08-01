@@ -36,7 +36,7 @@
 	                        <h1 class="hero-title mt-0">Mwonya Music Platform</h1>
                             <p class="hero-paragraph">Home to Music, Live Radio, Podcasts,Dj Mixes  and  Poems  All available on the go</p>
                             <p style="font-size: 15px;">Enjoy Ugandan Content at www.mwonya.com</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="register.php">Create Account</a><a class="button" href="register.php">Get in touch</a></div>
+	                        <div class="hero-cta"><a class="button button-primary" href="register">Create Account</a><a class="button" href="register.php">Get in touch</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
