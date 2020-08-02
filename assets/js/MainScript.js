@@ -43,29 +43,31 @@ $(document).on("change", "select.playlistname", function () {
 });
 
 function updatePassword(oldPasswordClass, newPasswordClass1, newPasswordClass2) {
-	var oldPassword = $("." + oldPasswordClass).val();
-	var newPassword1 = $("." + newPasswordClass1).val();
-	var newPassword2 = $("." + newPasswordClass2).val();
+    var oldPassword = $("." + oldPasswordClass).val();
+    var newPassword1 = $("." + newPasswordClass1).val();
+    var newPassword2 = $("." + newPasswordClass2).val();
 
-	$.post("includes/handlers/ajax/updatePassword.php", 
-		{ oldPassword: oldPassword,
-			newPassword1: newPassword1,
-			newPassword2: newPassword2, 
-			username: userLoggedIn})
+    $.post("includes/handlers/ajax/updatePassword.php",
+        {
+            oldPassword: oldPassword,
+            newPassword1: newPassword1,
+            newPassword2: newPassword2,
+            username: userLoggedIn
+        })
 
-	.done(function(response) {
-		$("." + oldPasswordClass).nextAll(".message").text(response);
-	})
+        .done(function (response) {
+            $("." + oldPasswordClass).nextAll(".message").text(response);
+        })
 
 
 }
 
 
-function updateEmail(emailClass){
+function updateEmail(emailClass) {
     var emailValue = $("." + emailClass).val();
 
-    $.post("includes/handlers/ajax/updateEmail.php", {email: emailValue, username: userLoggedIn})
-    .done(function (response) {
+    $.post("includes/handlers/ajax/updateEmail.php", { email: emailValue, username: userLoggedIn })
+        .done(function (response) {
             $("." + emailClass).nextAll(".message").text(response);
         });
 }
@@ -220,7 +222,7 @@ function addSongLiked(button) {
 
     if (songId != null) {
 
-        $.post("includes/handlers/ajax/addLikedSong.php", { songId: songId,artistId: artistId, username: userLoggedIn }).done(function (error) {
+        $.post("includes/handlers/ajax/addLikedSong.php", { songId: songId, artistId: artistId, username: userLoggedIn }).done(function (error) {
 
 
             if (error != "") {
@@ -303,6 +305,31 @@ function Audio() {
     this.setTrack = function (track) {
         this.currentlyPlaying = track;
         this.audio.src = track.path;
+        
+        // making song css tracker
+
+        console.log(this.currentlyPlaying[1]) //gets song title
+
+        $(".title:contains(" + this.currentlyPlaying[1] + ")").parent().parent().addClass('pkkkk');
+        $('.pkkkk').css("border-left","none");
+        $('.pkkkk').css("background","none");
+
+
+        if ($(".title:contains(" + this.currentlyPlaying[1] + ")").parent().parent().hasClass('pkkkk')) {
+            $('.track').removeClass('pkkkk');
+            $(".title:contains(" + this.currentlyPlaying[1] + ")").parent().parent().addClass('pkkkk');
+            $('.pkkkk').css("border-left", "2px solid yellow");
+            $('.pkkkk').css("background","#2c093a");
+
+        } else {
+            $('.pkkkk').css("border-left","none");
+            $('.pkkkk').css("background","none");
+
+            $('.track').removeClass('pkkkk');
+
+
+        }
+
     }
 
     this.play = function () {

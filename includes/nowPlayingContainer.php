@@ -201,7 +201,7 @@ $jsonArray = json_encode($resultArray);
 
       if (play == true) {
         playSong();
-        $(".track__title .title").attr("value", "playing now");
+        // $(".track__title .title").attr("value", "playing now");
 
       }
 

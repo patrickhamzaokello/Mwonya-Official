@@ -1,9 +1,26 @@
-RewriteEngine on
+$(".playsong").on('click', function(){
 
-RewriteCond %{REQUEST_FILENAME} !-d
+                                $(this).parent().parent().toggleClass('pkkkk');
+                                $('.pkkkk').css("background","#190a26");
 
-RewriteCond %{REQUEST_FILENAME}\.php -f
 
-RewriteRule ^album/([0-9]) album.php?id=$1 [NC,L]
+                                if($(this).parent().parent().hasClass('pkkkk')){
+                                  $('.track').removeClass('pkkkk');
+                                  $(this).parent().parent().addClass('pkkkk');
+                                  $('.pkkkk').css("background","blue");
 
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+                                }else{
+                                  $('.pkkkk').css("background","#190a26");
+                                  $('.track').removeClass('pkkkk');
+
+
+                                }
+
+
+                               });
+
+
+
+console.log(this.currentlyPlaying[1])
+
+$(".title:contains("+this.currentlyPlaying[1]+")").css("color","yellow");

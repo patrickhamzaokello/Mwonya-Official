@@ -1036,6 +1036,7 @@ body a:hover {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  color: red;
 }
 
 .tracks .track:hover {
