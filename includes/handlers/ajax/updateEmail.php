@@ -30,7 +30,7 @@ if(isset($_POST['email']) && $_POST['email'] !="" ){
 }
 
 else{
-    echo "You must provide a an Email";
+    echo "You must provide  an Email";
 }
 
 
