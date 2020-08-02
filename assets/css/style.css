@@ -68,8 +68,8 @@ body a:hover {
   align-items: center;
 }
 
-.header .navitems{
-  width: 60%;
+.navitems{
+  width: 66%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -186,11 +186,11 @@ body a:hover {
 
 @media (max-width: 1400px) {
   .content__left {
-    width: 30%;
+    width: 20%;
   }
 
   .content__middle {
-    width: 70%;
+    width: 80%;
   }
 
   .content__right {
@@ -199,6 +199,16 @@ body a:hover {
   .header .user {
    display: none;
   }
+
+  .playlistbtn{
+    display: none;
+  }
+
+  .page-flows{
+    display: none;
+    
+  }
+  
 }
 
 @media (max-width: 768px) {
@@ -392,8 +402,8 @@ body a:hover {
 }
 
 .playing__art {
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
 }
 
 .playing__art img {
@@ -1036,7 +1046,7 @@ body a:hover {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  color: red;
+  
 }
 
 .tracks .track:hover {
