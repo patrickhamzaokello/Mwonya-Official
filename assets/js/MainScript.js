@@ -283,6 +283,14 @@ function Audio() {
         nextSong();
     });
 
+    this.audio.addEventListener("play", function(){
+        $(".lds-dual-ring").css("display","inline-block");
+    });
+
+    this.audio.addEventListener("playing", function(){
+        $(".lds-dual-ring").css("display","none");
+    });
+
     this.audio.addEventListener("canplay", function () {
         //this refers to the object that the event was called on
         var duration = formatTime(this.duration);
