@@ -114,24 +114,13 @@ include("includes/classes/Playlist.php");
 
   <div class="songplaying">
 
-  <div style="
-    font-size: 20px;
-    color: green;
-    min-height: 100px;
-    width: 133px;
-    /* padding: 10px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    border: 1px solid;;"> Patrick </div>
+  <div class="lds-dual-ring"> </div>
 
     <div class="playing__art">
 
       <img role='link' tabindex='0' src="" alt="Album Art" />
 
     </div>
-
    
 
   </div>
