@@ -284,11 +284,16 @@ function Audio() {
     });
 
     this.audio.addEventListener("play", function(){
-        $(".lds-dual-ring").css("display","inline-block");
+        $(".lds-dual-ring").css("display","flex");
+        $(".playing__art img").css("opacity","40%");
+
     });
 
     this.audio.addEventListener("playing", function(){
+
         $(".lds-dual-ring").css("display","none");
+        $(".playing__art img").css("opacity","100%");
+
     });
 
     this.audio.addEventListener("canplay", function () {

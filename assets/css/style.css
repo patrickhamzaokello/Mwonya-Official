@@ -443,16 +443,14 @@ body a:hover {
 
 .lds-dual-ring {
   font-size: 20px;
-  color: green;
   min-height: 100px;
-  width: 133px;
-  /* padding: 10px; */
-  display: flex;
+  width: 100px;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
-  border: 1px solid;
-  background-color: #2d143a99;
+  border-radius: 50%;
+  z-index: auto;
 }
 
 .lds-dual-ring:after {
@@ -462,8 +460,8 @@ body a:hover {
   height: 50px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid yellow;
-  border-color: yellow transparent yellow transparent;
+  border: 6px solid white;
+  border-color: white transparent white transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 
