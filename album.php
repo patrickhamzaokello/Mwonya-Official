@@ -46,7 +46,6 @@ $artist = $album->getArtist();
         Play All
       </button>
 
-      <div class="lds-dual-ring"></div>
 
 
     </div>

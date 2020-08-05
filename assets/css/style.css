@@ -389,7 +389,11 @@ body a:hover {
 
 .songplaying{
   height: 26%;
+  width: 100%;
   background: #2c093a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .playing {
@@ -401,16 +405,15 @@ body a:hover {
   align-items: center;
 }
 
-.playing__art {
-  /* height: 100%; */
-  /* width: 100%; */
-}
+.playing__art {height: 100%;width: 100%;/* animation: lds-dual-ring 2.2s linear infinite; */}
 
 .playing__art img {
   width: 100%;
   height: 100%;
-  background-color: #623680;
-  padding: 10px;
+  /* border-radius: 50%; */
+  background-color: #a696c1;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .playing__song {
