@@ -100,7 +100,7 @@ include("includes/classes/Playlist.php");
 
   </section>
 
-  <!-- <section class="playlist">
+  <section class="playlist">
 
       <span role='link' tabindex='0'onclick="createPlaylist()">
 
@@ -110,7 +110,7 @@ include("includes/classes/Playlist.php");
 
       </span>
 
-    </section> -->
+    </section>
 
   <div class="songplaying">
 
