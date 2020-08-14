@@ -123,7 +123,7 @@ INSERT INTO `genres` (`id`, `name`) VALUES
 (9, 'Folk'),
 (10, 'Country'),
 (11, 'Alternative'),
-(12, 'Christian & Gospel')
+(12, 'Christian & Gospel'),
 (13, 'African');
 
 -- --------------------------------------------------------
