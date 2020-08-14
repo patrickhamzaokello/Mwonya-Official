@@ -106,7 +106,7 @@ include("includes/classes/Playlist.php");
 
         <i class="ion-ios-plus-outline"></i>
 
-        New Playlist
+        Add Playlist
 
       </span>
 
