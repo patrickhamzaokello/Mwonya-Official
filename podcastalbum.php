@@ -18,7 +18,7 @@ $artist = $album->getArtist();
               
                 <div class="overview__albums__head">
                 
-                  <span class="section-title">Album</span>
+                  <span class="section-title">Podcast Details</span>
                   
                   <span class="view-type">
                   
@@ -38,9 +38,11 @@ $artist = $album->getArtist();
                     <div class="rightSection">
                         <h2><?php echo $album->getTitle(); ?></h2>
 
-                        <p>ARTIST: <?php echo $artist->getName(); ?></p>
+                        <p>Creator: <?php echo $artist->getName(); ?></p>
+                        <span>Summary<span>
+                        <p><?php echo $album->getDescription(); ?></p>
 
-                        <p> <?php echo $album->getNumberOfSongs(); ?> Songs</p>
+                        <p> Episodes: <?php echo $album->getNumberOfSongs(); ?></p>
 
                         <button class="button-dark" onclick="playFirstSong()">
                           <i class="ion-ios-play"></i>

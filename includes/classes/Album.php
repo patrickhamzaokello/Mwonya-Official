@@ -8,6 +8,7 @@
         private $artistId;
         private $genre;
         private $artworkPath;
+        private $description;
       
 
         public function __construct($con , $id) {
@@ -21,6 +22,8 @@
             $this->artistId = $album['artist'];
             $this->genre = $album['genre'];
             $this->artworkPath = $album['artworkPath'];
+            $this->description = $album['description'];
+
 
         }
 
@@ -41,6 +44,11 @@
         public function getArtworkPath(){
 
             return $this->artworkPath;
+        }
+
+        public function getDescription(){
+
+            return $this->description;
         }
 
         public function getGenre(){

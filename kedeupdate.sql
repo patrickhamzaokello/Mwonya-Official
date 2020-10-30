@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `Mwonya`
+-- Database: `kede`
 --
 
 -- --------------------------------------------------------
@@ -91,8 +91,7 @@ INSERT INTO `artists` (`id`, `name`, `profilephoto`, `genre`) VALUES
 (9, 'Hozier', 'assets/images/artistprofiles/mickey.png', 11),
 (10, 'Justin Bieber', 'assets/images/artistprofiles/justinbieber.png', 2),
 (11, 'Khalid', 'assets/images/artistprofiles/khalid.png', 5),
-(12, 'Kanye West', 'assets/images/artistprofiles/kanyewest.png', 12)
-(12, 'Aol Hope','assets/images/artistprofiles/aolhope.png',13);
+(12, 'Kanye West', 'assets/images/artistprofiles/kanyewest.png', 12);
 
 -- --------------------------------------------------------
 
@@ -123,8 +122,7 @@ INSERT INTO `genres` (`id`, `name`) VALUES
 (9, 'Folk'),
 (10, 'Country'),
 (11, 'Alternative'),
-(12, 'Christian & Gospel'),
-(13, 'African');
+(12, 'Christian & Gospel');
 
 -- --------------------------------------------------------
 

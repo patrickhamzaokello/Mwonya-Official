@@ -100,17 +100,17 @@ include("includes/classes/Playlist.php");
 
   </section>
 
-  <section class="playlist">
+  <!-- <section class="playlist">
 
       <span role='link' tabindex='0'onclick="createPlaylist()">
 
         <i class="ion-ios-plus-outline"></i>
 
-        Add Playlist
+        New Playlist
 
       </span>
 
-    </section>
+    </section> -->
 
   <div class="songplaying">
 
