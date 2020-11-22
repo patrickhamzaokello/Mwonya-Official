@@ -5,10 +5,9 @@ include("includes/includedFiles.php");
 ?>
 <!-- headerends -->
 <div class="overview__albums">
+    <div class="overview__albums__head">
 
-    <div class="overview__albums__head" id="podcastsection">
-
-        <h2 class="pageHeadingBig">Podcasts</h2>
+        <h2 class="pageHeadingBig">DJ Mixes</h2>
 
         <span class="view-type">
 
@@ -27,22 +26,22 @@ include("includes/includedFiles.php");
 
             <?php
 
-      $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"podcast\" ORDER BY RAND() LIMIT 20");
+      $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"dj\" ORDER BY RAND() LIMIT 20");
 
       while ($row = mysqli_fetch_array($albumQuery)) {
 
         echo "<div class='gridViewItem'>
 
-      <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
+  <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
 
-        <img src='" . $row['artworkPath'] . "'>
+    <img src='" . $row['artworkPath'] . "'>
 
-        <div class='gridViewInfo'>"
+    <div class='gridViewInfo'>"
           . $row['title'] .
           "</div> 
-      </span>  
-      
-    </div>";
+  </span>  
+
+  </div>";
       }
 
       ?>
@@ -96,10 +95,9 @@ include("includes/includedFiles.php");
 
     </div>
 
+    <div class="overview__albums__head" id="podcastsection">
 
-    <div class="overview__albums__head">
-
-        <h2 class="pageHeadingBig">DJ Mixes</h2>
+        <h2 class="pageHeadingBig">Podcasts</h2>
 
         <span class="view-type">
 
@@ -118,22 +116,22 @@ include("includes/includedFiles.php");
 
             <?php
 
-      $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"dj\" ORDER BY RAND() LIMIT 20");
+      $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE tag = \"podcast\" ORDER BY RAND() LIMIT 20");
 
       while ($row = mysqli_fetch_array($albumQuery)) {
 
         echo "<div class='gridViewItem'>
 
-          <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
+      <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
 
-            <img src='" . $row['artworkPath'] . "'>
+        <img src='" . $row['artworkPath'] . "'>
 
-            <div class='gridViewInfo'>"
+        <div class='gridViewInfo'>"
           . $row['title'] .
           "</div> 
-          </span>  
-
-          </div>";
+      </span>  
+      
+    </div>";
       }
 
       ?>
@@ -141,6 +139,11 @@ include("includes/includedFiles.php");
         </div>
 
     </div>
+
+
+
+
+
 
 
     <div class="overview__albums__head">

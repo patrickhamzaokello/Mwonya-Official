@@ -1,11 +1,11 @@
 <div class="content__right">
 
-  <div class="topChart">
+    <div class="topChart">
 
-    <p>TOP 10 SONGS</p>
+        <p>WEEKLY TOP 10 SONGS</p>
 
 
-    <?php
+        <?php
 
 
     $topchart = mysqli_query($con, "SELECT id FROM songs  ORDER BY  plays DESC LIMIT 10");
@@ -60,14 +60,14 @@
 
     ?>
 
-    <script>
-      var topchartsongID = '<?php echo json_encode($songIdArray); ?>';
-      tempPlaylist = JSON.parse(topchartsongID);
-      // console.log(tempPlaylist);
-    </script>
+        <script>
+        var topchartsongID = '<?php echo json_encode($songIdArray); ?>';
+        tempPlaylist = JSON.parse(topchartsongID);
+        // console.log(tempPlaylist);
+        </script>
 
 
-  </div>
+    </div>
 
 
 </div>

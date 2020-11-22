@@ -38,7 +38,7 @@ include("includes/includedFiles.php");
 
               <span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
 
-                <img src='" . $row['artworkPath'] . "'>
+                <img class='image' src='" . $row['artworkPath'] . "'>
 
                 <div class='gridViewInfo'>"
           . $row['title'] .
@@ -83,7 +83,7 @@ include("includes/includedFiles.php");
 
       <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
 
-        <img src='" . $row['artworkPath'] . "'>
+        <img class='image' src='" . $row['artworkPath'] . "'>
 
         <div class='gridViewInfo'>"
           . $row['title'] .
@@ -131,7 +131,7 @@ include("includes/includedFiles.php");
 
       <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
 
-        <img src='" . $row['artworkPath'] . "'>
+        <img class='image' src='" . $row['artworkPath'] . "'>
 
         <div class='gridViewInfo'>"
           . $row['title'] .
@@ -183,7 +183,7 @@ include("includes/includedFiles.php");
 
 <span role='link' tabindex='0' onclick='openPage(\"podcastalbum.php?id=" . $row['id'] . "\")'>
 
-  <img src='" . $row['artworkPath'] . "'>
+  <img class='image' src='" . $row['artworkPath'] . "'>
 
   <div class='gridViewInfo'>"
           . $row['title'] .

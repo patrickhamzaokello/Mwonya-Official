@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
 
 
     $albumtitle = $_POST['AlbumTitle'];
-    $selectArtist = $_POST['artistselect'];
+    $selectArtist = $artistid;
     $selectGenre = $_POST['genreselect'];
     $description = $_POST['description'];
     $tag = "music";

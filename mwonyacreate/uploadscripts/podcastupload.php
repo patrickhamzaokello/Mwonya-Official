@@ -1,7 +1,7 @@
 <?php
 
 // Database connection
-include("config/database.php");
+// include("config/database.php");
 
 function sanitizeFormUsername($inputText)
 {
@@ -11,21 +11,6 @@ function sanitizeFormUsername($inputText)
 }
 
 
-//Our select statement. This will retrieve the data that we want.
-$sqlartist = "SELECT id, name FROM artists";
-$sqlgenre = "SELECT id, name FROM genres";
-
-//Prepare the select statement.
-$stmtartist = $conn->prepare($sqlartist);
-$stmtgrenre = $conn->prepare($sqlgenre);
-
-//Execute the statement.
-$stmtartist->execute();
-$stmtgrenre->execute();
-
-//Retrieve the rows using fetchAll.
-$artists = $stmtartist->fetchAll();
-$genres = $stmtgrenre->fetchAll();
 
 if (isset($_POST["submit"])) {
     $target_dir = "../assets/images/podcastalbumartwork/";

@@ -27,12 +27,24 @@ if (isset($_POST["submit"])) {
     $dbtarget_dir = "assets/images/artistprofiles/";
 
     $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
+    $covertarget_file = $target_dir . basename($_FILES["coverUpload"]["name"]);
+
     $dbtarget_file = $dbtarget_dir . basename($_FILES["fileUpload"]["name"]);
+    $dbcovertarget_file = $dbtarget_dir . basename($_FILES["coverUpload"]["name"]);
+
+
 
 
     //Get username
     $artistname = $_POST['Artistname'];
     $selectOption = $_POST['taskOption'];
+    $contentType = $_POST['artistType'];
+
+    $email = $_POST['Artistemail'];
+    $password = $_POST['Artistpassword'];
+    $description = $_POST['Artistdescription'];
+
+
 
     // Get file extension
     $imageExt = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -61,8 +73,8 @@ if (isset($_POST["submit"])) {
             "message" => "File already exists."
         );
     } else {
-        if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
-            $sql = "INSERT INTO artists (name,profilephoto,genre) VALUES ('$artistname','$dbtarget_file','$selectOption')";
+        if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file) && move_uploaded_file($_FILES["coverUpload"]["tmp_name"], $covertarget_file)) {
+            $sql = "INSERT INTO artists (name,email,password,profilephoto,coverimage,bio,genre,tag) VALUES ('$artistname','$email','$password','$dbtarget_file','$dbcovertarget_file','$description','$selectOption','$contentType')";
             $stmt = $conn->prepare($sql);
             if ($stmt->execute()) {
                 $resMessage = array(

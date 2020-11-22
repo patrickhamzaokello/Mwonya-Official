@@ -12,109 +12,109 @@ $artist = new Artist($con, $artistId);
 ?>
 <!-- headerends -->
 
-<div class="artist__header">
+<div class="artist__header" style="background-image: url('<?php echo $artist->getArtistCoverPath(); ?>');">
 
-  <div class="artist__info">
+    <div class="artist__info">
 
-    <div class="profile__img">
+        <div class="profile__img">
 
-      <img src="<?php echo $artist->getProfilePath(); ?>"/>
+            <img src="<?php echo $artist->getProfilePath(); ?>" />
+
+        </div>
+
+        <div class="artist__info__meta">
+
+            <div class="artist__info__type">Artist</div>
+
+            <div class="artist__info__name"><?php echo $artist->getName(); ?></div>
+
+            <div class="artist__info__actions">
+
+                <button class="button-dark" onclick="playFirstSong()">
+                    <i class="ion-ios-play"></i>
+                    Play
+                </button>
+
+                <button class="button-light">Follow</button>
+
+                <button class="button-light more">
+                    <i class="ion-ios-more"></i>
+                </button>
+
+            </div>
+
+        </div>
+
 
     </div>
 
-    <div class="artist__info__meta">
+    <div class="artist__listeners">
 
-      <div class="artist__info__type">Artist</div>
+        <?php
 
-      <div class="artist__info__name"><?php echo $artist->getName(); ?></div>
+    $totalplaysquery = mysqli_query($con, "SELECT SUM(`plays`) AS totalplays FROM songs where `artist` = $artistId");
+    $row = mysqli_fetch_array($totalplaysquery);
 
-      <div class="artist__info__actions">
 
-        <button class="button-dark" onclick="playFirstSong()">
-          <i class="ion-ios-play"></i>
-          Play
-        </button>
+    echo " <div class='artist__listeners__count'>" . $row['totalplays'] . "</div>  ";
 
-        <button class="button-light">Follow</button>
 
-        <button class="button-light more">
-          <i class="ion-ios-more"></i>
-        </button>
+    ?>
 
-      </div>
+        <div class="artist__listeners__label">Monthly Listeners</div>
 
     </div>
 
+    <div class="artist__navigation">
 
-  </div>
+        <ul class="nav nav-tabs" role="tablist">
 
-  <div class="artist__listeners">
+            <li role="presentation" class="active">
+                <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
+            </li>
 
-  <?php
-
-  $totalplaysquery = mysqli_query($con, "SELECT SUM(`plays`) AS totalplays FROM songs where `artist` = $artistId");
-  $row = mysqli_fetch_array($totalplaysquery);
-
-
-  echo " <div class='artist__listeners__count'>". $row['totalplays'] ."</div>  ";
-    
-  
-  ?>
-
-    <div class="artist__listeners__label">Monthly Listeners</div>
-
-  </div>
-
-  <div class="artist__navigation">
-
-    <ul class="nav nav-tabs" role="tablist">
-
-      <li role="presentation" class="active">
-        <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
-      </li>
-
-      <!--<li role="presentation">
+            <!--<li role="presentation">
                 <a href="#artist-about" aria-controls="artist-about" role="tab" data-toggle="tab">About</a>
               </li>-->
 
-    </ul>
+        </ul>
 
-    <div class="artist__navigation__friends">
+        <div class="artist__navigation__friends">
 
-      <a href="#">
-        <img src="assets/images/profile-pics/me.jpg" alt="" />
-      </a>
+            <a href="#">
+                <img src="assets/images/profile-pics/me.jpg" alt="" />
+            </a>
 
-      <a href="#">
-        <img src="assets/images/profile-pics/me.jpg" alt="" />
-      </a>
+            <a href="#">
+                <img src="assets/images/profile-pics/me.jpg" alt="" />
+            </a>
 
-      <a href="#">
-        <img src="assets/images/profile-pics/me.jpg" alt="" />
-      </a>
+            <a href="#">
+                <img src="assets/images/profile-pics/me.jpg" alt="" />
+            </a>
+
+        </div>
 
     </div>
-
-  </div>
 
 </div>
 
 <div class="artist__content">
 
-  <div class="tab-content">
+    <div class="tab-content">
 
-    <!-- Overview -->
-    <div role="tabpanel" class="tab-pane active" id="artist-overview">
+        <!-- Overview -->
+        <div role="tabpanel" class="tab-pane active" id="artist-overview">
 
-      <div class="overview">
+            <div class="overview">
 
-        <div class="overview__artist">
+                <div class="overview__artist">
 
-          <!-- Latest Release-->
-          <div class="section-title">Latest Release</div>
+                    <!-- Latest Release-->
+                    <div class="section-title">Latest Release</div>
 
-          <div class="latest-release">
-            <?php
+                    <div class="latest-release">
+                        <?php
 
 
             $albumQuery = mysqli_query($con, "SELECT * FROM albums where artist='$artistId'ORDER BY id DESC LIMIT 1");
@@ -151,15 +151,15 @@ $artist = new Artist($con, $artistId);
             }
             ?>
 
-          </div>
-          <!-- / -->
+                    </div>
+                    <!-- / -->
 
-          <!-- Popular-->
-          <div class="section-title">Popular</div>
+                    <!-- Popular-->
+                    <div class="section-title">Popular</div>
 
-          <div class="tracks">
+                    <div class="tracks">
 
-            <?php
+                        <?php
 
 
             $songIdArray = $artist->getSongIds();
@@ -190,7 +190,7 @@ $artist = new Artist($con, $artistId);
 
                             <div class='track__title featured'>
                             
-                              <span class='title'>" . $albumSong->getTitle() . "</span>
+                              <span class='title' onclick='setTrack(\"" . $albumSong->getId() . "\",tempPlaylist, true)'>" . $albumSong->getTitle() . "</span>
                               <span class='feature'>" . $albumArtist->getName() . "</span>
                               
                             </div>
@@ -218,56 +218,56 @@ $artist = new Artist($con, $artistId);
 
             ?>
 
-            <script>
-              var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
-              tempPlaylist = JSON.parse(tempSongIds);
-              // console.log(tempPlaylist);
-            </script>
+                        <script>
+                        var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
+                        tempPlaylist = JSON.parse(tempSongIds);
+                        // console.log(tempPlaylist);
+                        </script>
 
 
 
-          </div>
+                    </div>
 
 
-          <!-- options menu -->
+                    <!-- options menu -->
 
-          <nav class="optionsMenu">
-            <input type="hidden" class="songId">
+                    <nav class="optionsMenu">
+                        <input type="hidden" class="songId">
 
-            <?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername()); ?>
-
-
-          </nav>
-
-          <button class="show-more button-light">Show 5 More</button>
-          <!-- / -->
-
-        </div>
-
-        <div class="overview__related">
-
-          <div class="section-title">Related Artist</div>
-
-          <div class="related-artists">
+                        <?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername()); ?>
 
 
-            <?php
+                    </nav>
 
-              $artistGenre = $artist->getGenre();
-              $artistname = $artist->getName();
+                    <button class="show-more button-light">Show 5 More</button>
+                    <!-- / -->
+
+                </div>
+
+                <div class="overview__related">
+
+                    <div class="section-title">Related Artist</div>
+
+                    <div class="related-artists">
 
 
-              $artistQuery = mysqli_query($con, "SELECT * FROM artists WHERE genre='$artistGenre' AND name != '$artistname' ");
+                        <?php
+
+            $artistGenre = $artist->getGenre();
+            $artistname = $artist->getName();
+
+
+            $artistQuery = mysqli_query($con, "SELECT * FROM artists WHERE genre='$artistGenre' AND name != '$artistname' ");
+
+            while ($row = mysqli_fetch_array($artistQuery)) {
+
+              echo "
   
-              while($row = mysqli_fetch_array($artistQuery)){
-
-                echo "
-  
-                <a href='#' class='related-artist' role='link' tabindex='0' onclick='openPage(\"artist.php?id=".$row['id']."\")'>
+                <a href='#' class='related-artist' role='link' tabindex='0' onclick='openPage(\"artist.php?id=" . $row['id'] . "\")'>
             
                   <span class='related-artist__img'>
                   
-                    <img src=\"".$row['profilephoto']."\" />
+                    <img src=\"" . $row['profilephoto'] . "\" />
                     
                   </span>
                   
@@ -275,43 +275,41 @@ $artist = new Artist($con, $artistId);
                   
                 </a>             
                     ";
+            }
 
 
-              }
-  
 
-            
 
             ?>
 
 
 
-          </div>
+                    </div>
 
-        </div>
+                </div>
 
-        <div class="overview__albums">
+                <div class="overview__albums">
 
-          <div class="overview__albums__head">
+                    <div class="overview__albums__head">
 
-            <span class="section-title">Albums</span>
+                        <span class="section-title">Albums</span>
 
-            <span class="view-type">
+                        <span class="view-type">
 
-              <i class="fa fa-list list active"></i>
+                            <i class="fa fa-list list active"></i>
 
-              <i class="fa fa-th-large card"></i>
+                            <i class="fa fa-th-large card"></i>
 
-            </span>
+                        </span>
 
-          </div>
+                    </div>
 
-          <div class="album">
+                    <div class="album">
 
 
-            <div class="gridViewContainer">
+                        <div class="gridViewContainer">
 
-              <?php
+                            <?php
 
               $albumQuery = mysqli_query($con, "SELECT * FROM albums where artist='$artistId'");
 
@@ -337,21 +335,21 @@ $artist = new Artist($con, $artistId);
               ?>
 
 
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
             </div>
 
-
-
-          </div>
-
         </div>
+        <!-- / -->
 
-      </div>
+
 
     </div>
-    <!-- / -->
-
-
-
-  </div>
 
 </div>

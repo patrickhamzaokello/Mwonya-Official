@@ -37,7 +37,7 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mwonya Music</title>
     <link rel="icon" href="assets/images/musiclogo.png" type="image/png">
     <link

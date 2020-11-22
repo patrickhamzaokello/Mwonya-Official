@@ -1,94 +1,113 @@
 <?php
 if (isset($_GET['term'])) {
-  $term = urldecode($_GET['term']);
+    $term = urldecode($_GET['term']);
 } else {
-  $term = "";
+    $term = "";
 }
 ?>
 
 <script>
-  $(".searchInput").focus();
-  $(function() {
+$(".searchInput").focus();
+$(function() {
 
     $(".searchInput").keyup(function() {
-      clearTimeout(timer);
+        clearTimeout(timer);
 
-      $(".spinner img").css("visibility", "visible");
+        $(".spinner img").css("visibility", "visible");
 
 
-      timer = setTimeout(function() {
+        timer = setTimeout(function() {
 
-        var val = $(".searchInput").val();
-        openPage("search.php?term=" + val);
-      }, 2000)
+            var val = $(".searchInput").val();
+            openPage("search.php?term=" + val);
+        }, 2000)
     });
 
-  });
+});
+
+function menuhandler() {
+    document.getElementById("navmenu").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("navchange");
+}
 </script>
 
 
 <section class="header">
 
-  <div class="page-flows">
+    <div class="page-flows">
 
-    <span class="flow" role="link" tabindex="0" onclick="openPage('browse.php')">
-      Mwonya
-    </span>
-
-
-  </div>
-
-  <div class="search">
-
-    <input type="text" class="searchInput" value="<?php echo $term ?>" placeholder="Search" onfocus="this.value = this.value" />
-
-    <span class="spinner"> <img src="assets/images/icons/spinner.gif" alt=""></span>
-
-  </div>
-
-  <div class="navitems">
-
-    <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('browse.php')">
-      <i class="ion-ios-browsers"></i>
-      <span>Music</span>
-    </span>
-
-    <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('podcasts.php')">
-      <i class="ion-person-stalker"></i>
-      <span>PodCast</span>
-    </span>
-
-    <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('poems.php')">
-      <i class="ion-radio-waves"></i>
-      <span>Poems</span>
-    </span>
-
-    <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('radio.php')">
-      <i class="ion-radio-waves"></i>
-      <span>Live Radio</span>
-    </span>
-
-    <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('Mixes.php')">
-      <i class="ion-radio-waves"></i>
-      <span>Dj Mixes</span>
-    </span>
-
-    <button class="playlistbtn button-dark" onclick="createPlaylist()">
-      <span role='link' tabindex='0'>
-
-        <i class="ion-ios-plus-outline"></i>
-
-        Playlist
-
-      </span>
-    </button>
+        <span class="flow" role="link" tabindex="0" onclick="openPage('browse.php')">
+            Mwonya
+        </span>
 
 
-  </div>
+    </div>
 
-  <div class="user">
+    <div class="search">
 
-    <!-- <div class="user__notifications">
+        <input type="text" class="searchInput" value="<?php echo $term ?>" placeholder="Search"
+            onfocus="this.value = this.value" />
+
+        <span class="spinner"> <img src="assets/images/icons/spinner.gif" alt=""></span>
+        <div id="menu-bar">
+            <div id="navmenu" onclick="menuhandler()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="navitems">
+
+        <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('browse.php')">
+            <i class="ion-ios-browsers"></i>
+            <span>Music</span>
+        </span>
+
+        <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('radio.php')">
+            <i class="ion-radio-waves"></i>
+            <span>Live Radio</span>
+        </span>
+
+        <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('podcasts.php')">
+            <i class="ion-person-stalker"></i>
+            <span>Podcast</span>
+        </span>
+
+        <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('poems.php')">
+            <i class="ion-radio-waves"></i>
+            <span>Poems</span>
+        </span>
+
+
+
+        <span class="navigation__list__item" role="link" tabindex="0" onclick="openPage('Mixes.php')">
+            <i class="ion-radio-waves"></i>
+            <span>Dj Mixes</span>
+        </span>
+
+        <button class="playlistbtn button-dark" onclick="createPlaylist()">
+            <span role='link' tabindex='0'>
+
+                <i class="ion-ios-plus-outline"></i>
+
+                Playlist
+
+            </span>
+        </button>
+
+
+    </div>
+
+    <div class="user">
+
+        <!-- <div class="user__notifications">
       
         <i class="ion-android-notifications"></i>
         
@@ -100,39 +119,40 @@ if (isset($_GET['term'])) {
         
       </div> -->
 
-    <div class="user__info">
+        <div class="user__info">
 
-      <span class="user__info__img">
+            <span class="user__info__img">
 
-        <img src="assets/images/profile-pics/head_emerald.jpg" alt="Profile Picture" class="img-responsive" />
+                <img src="assets/images/profile-pics/head_emerald.jpg" alt="Profile Picture" class="img-responsive" />
 
-      </span>
+            </span>
 
-      <span class="user__info__name" role="link" tabindex="0" onclick="openPage('settings.php')">
+            <span class="user__info__name" role="link" tabindex="0" onclick="openPage('settings.php')">
 
-        <span class="first"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
+                <span class="first"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
 
-        <!--           <span class="last">Hamza</span> -->
+                <!--           <span class="last">Hamza</span> -->
 
-      </span>
+            </span>
+
+        </div>
+
+        <div class="user__actions">
+
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                    <i class="ion-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <li><span role="link" tabindex="0" onclick="openPage('settings.php')">Account</span></li>
+                    <li><span role="link" tabindex="0" onclick="openPage('updateDetails.php')">Settings</span></li>
+                    <li><span role="link" tabindex="0" onclick="logout()">Log Out</span></li>
+                </ul>
+            </div>
+
+        </div>
 
     </div>
-
-    <div class="user__actions">
-
-      <div class="dropdown">
-        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          <i class="ion-chevron-down"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-          <li><span role="link" tabindex="0" onclick="openPage('settings.php')">Account</span></li>
-          <li><span role="link" tabindex="0" onclick="openPage('updateDetails.php')">Settings</span></li>
-          <li><span role="link" tabindex="0" onclick="logout()">Log Out</span></li>
-        </ul>
-      </div>
-
-    </div>
-
-  </div>
 
 </section>

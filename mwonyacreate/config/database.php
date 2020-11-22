@@ -1,16 +1,15 @@
 <?php
 
-// $hostname = "localhost";
-// $username = "root";
-// $password = "";
-// $databasename = "mwonya";
-
-
-// $con = mysqli_connect("localhost", "pkasemer", "hH!oQ5amzeas412", "kede");
 $hostname = "localhost";
-$username = "mwonyaAdmin";
-$password = "UpjYTaZ8Lg#g";
+$username = "root";
+$password = "";
 $databasename = "mwonya";
+
+
+// $hostname = "localhost";
+// $username = "mwonyaAdmin";
+// $password = "UpjYTaZ8Lg#g";
+// $databasename = "mwonya";
 
 
 try {
